@@ -12,15 +12,15 @@ import os
 # FONCTIONS
 def load_lst_user_pickle() -> list[User]:
     """ Retourne la liste d'objet user du pickle """
-    with open(PATH_PICKLE, 'rb') as fichier:
+    with open("data_base_user.pickle", 'rb') as fichier:
         try: lst_user = pickle.load(fichier)
-        except EOFError: lst_user = [] # Si il n'y a pas de profil, créer une liste vide
+        except EOFError: lst_user = []
     return lst_user
 
 
 def dump_lst_user_pickle(lst_user):
     """ Enregistre la liste d'objet user dans le pickle """
-    with open(PATH_PICKLE, 'wb') as fichier:
+    with open("data_base_user.pickle", 'wb') as fichier:
         pickle.dump(lst_user, fichier)
 
 
@@ -135,7 +135,6 @@ def afficher_main() :
 
 
 # MAIN
-PATH_PICKLE = r"data_base_user.pickle"
 if __name__ == "__main__":
     user = choisir_profil()
     while True:
