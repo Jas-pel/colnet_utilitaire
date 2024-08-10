@@ -6,6 +6,7 @@ from user import *
 from session import Session
 from creer_profil import creer_profil, actualiser_session
 from messagerie import send_message
+import os
 
  
 # FONCTIONS
@@ -78,7 +79,7 @@ def modifier_profil(user:User) :
     """
     while True :
 
-        afficher_contenu_liste(["Mot de passe", "DA"], "Sélectionne ce que tu veux modifier")
+        afficher_contenu_liste(["Mot de passe", "DA", "Retour menu principal"], "Sélectionne ce que tu veux modifier")
         choix = int(input("Entre ton choix : "))
 
         if choix == 1 : 
@@ -91,6 +92,9 @@ def modifier_profil(user:User) :
             enregistrer_pickle(user)
             break
 
+        elif choix == 3:
+            break
+        
         else : print("Entre une information valide !")
 
 
@@ -131,10 +135,11 @@ def afficher_main() :
 
 
 # MAIN
-PATH_PICKLE = r"C:\Kingston\Programmation\cegep_jonq_utilitaire\data_base_user.pickle"
+PATH_PICKLE = r"data_base_user.pickle"
 if __name__ == "__main__":
     user = choisir_profil()
     while True:
+        os.system('cls')
         match afficher_main():
             case 1 : 
                 print(f"Ta moyenne générale total est de {choisir_session(user).get_moyenne_generale()}%")
