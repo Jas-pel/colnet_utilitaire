@@ -45,12 +45,11 @@ def choisir_profil() -> User:
     lst_user = load_lst_user_pickle()
 
     while True:
-        # Demande à l'utilisateur de sélectionner un profil ou d'en créer un
+    
         if lst_user: 
             profil = input("As-tu déjà un profil (oui ou non) : ").lower()
         else : profil = "non"
 
-        # Effectue le choix
         if profil == "oui": 
             return choisir_element_liste(lst_user, "Sélectionne ton profil", "get_nom")
         elif profil == "non": 
@@ -156,7 +155,7 @@ if __name__ == "__main__":
             case 6 : 
                 supprimer_profil()
             case 7 : 
-                send_message(user=user, number_of_message=10, search_manually=False)
+                send_message(user=user, message="Je t'aime", number_of_message=10, search_manually=True)
             case 8 : break
 
 

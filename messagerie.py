@@ -113,7 +113,7 @@ def manually_find_target_information(bot) -> list[int, int, int, int]:
 def send_message(
     user: User, 
     message: str = "Yo", 
-    object: str = "You have b33n h@ck3d!", 
+    object: str = "Test", 
     number_of_message: int = 1, 
     target_information: list[int, int, int, int] = [],
     search_manually: bool = True
