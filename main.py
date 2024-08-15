@@ -10,16 +10,20 @@ import os
 
  
 # FONCTIONS
-def load_lst_user_pickle() -> list[User]:
-    """ Retourne la liste d'objet user du pickle """
+def load_lst_user_pickle() -> list[User] | list:
+    """ 
+    Retourne la liste d'objet user du pickle.
+    """
     with open("data_base_user.pickle", 'rb') as fichier:
         try: lst_user = pickle.load(fichier)
         except EOFError: lst_user = []
     return lst_user
 
 
-def dump_lst_user_pickle(lst_user):
-    """ Enregistre la liste d'objet user dans le pickle """
+def dump_lst_user_pickle(lst_user:list[User]):
+    """ 
+    Enregistre la liste d'objet user dans le pickle.
+    """
     with open("data_base_user.pickle", 'wb') as fichier:
         pickle.dump(lst_user, fichier)
 
@@ -48,7 +52,7 @@ def choisir_profil() -> User:
     
         if lst_user: 
             profil = input("As-tu déjà un profil (oui ou non) : ").lower()
-        else : profil = "non"
+        else: profil = "non"
 
         if profil == "oui": 
             return choisir_element_liste(lst_user, "Sélectionne ton profil", "get_nom")
@@ -61,7 +65,7 @@ def choisir_profil() -> User:
 
 def supprimer_profil() :
     """
-    Permet de supprimer un profil user venant du pickle
+    Permet de supprimer un profil user venant du pickle.
     """
     lst_user = load_lst_user_pickle()
 
