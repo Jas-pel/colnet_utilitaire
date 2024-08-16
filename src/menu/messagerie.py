@@ -8,7 +8,7 @@ def automatically_find_target_information(bot):
     Retourne la liste des informations pour contacter la cible.
     """
     while True:
-        target_name = input("Entre le prénom de la personne comme ceci 'Pelletier, jasmin' : ").lower().strip().replace(" ", "")
+        target_name = input("Entre le prénom de la personne comme ceci 'pelletier,jasmin' : ").lower().strip().replace(" ", "")
 
         # Parcourir chaque session
         nb_sessions = len(bot.obtenir_objet_html_session())

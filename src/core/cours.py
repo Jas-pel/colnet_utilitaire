@@ -1,5 +1,6 @@
 class Cours:
     """ Créer un objet cours. """
+    
     def __init__(self, nom_matiere, code_matiere): # Possibilité de faire un dictionnaire avec les deux premiers
         self.__nom = nom_matiere
         self.__code = code_matiere

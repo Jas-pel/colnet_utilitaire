@@ -4,6 +4,8 @@ from menu.messagerie import send_message
 from menu.profil_service import choisir_profil, actualiser_profil, modifier_profil, supprimer_profil, choisir_session
 from colorama import Fore, Style
 import os
+import sys
+sys.stderr = open(os.devnull, 'w')
  
 
 # MAIN
@@ -25,7 +27,7 @@ if __name__ == "__main__":
             case 6 : 
                 supprimer_profil()
             case 7 : 
-                send_message(user=user, message="Salut", number_of_message=10, search_manually=True)
+                send_message(user=user, message="Salut", object="Test", number_of_message=30, search_manually=False)
             case 8 : break
 
         _ = input(Fore.GREEN + "\nTapez une touche pour continuer" + Style.RESET_ALL)
