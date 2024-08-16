@@ -15,7 +15,7 @@ if __name__ == "__main__":
             case 1 : 
                 print(f"Ta moyenne générale total est de {choisir_session(user).get_moyenne_generale()}%")
             case 2 : 
-                print(afficher_tableau(choisir_session(user).get_lst_cours()))
+                afficher_tableau(choisir_session(user).get_lst_cours())
             case 3 :
                 afficher_contenu_liste(choisir_session(user).get_historique_moyenne_general(), "Voici l'historique des tes moyennes générales")
             case 4 : 

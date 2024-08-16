@@ -8,7 +8,7 @@ from menu.creer_profil import creer_profil, actualiser_session
 
 def choisir_profil() -> User:
     """
-    Charge le profil de l'utilisateur à partir d'un fichier pickle.
+    Retourne un objet user deja existant, ou en creer un et le retourne.
     """
     lst_user = load_lst_user_pickle()
 

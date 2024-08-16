@@ -19,8 +19,9 @@ def afficher_contenu_liste(liste: list, titre: str, methode=None) -> None:
     Affiche les éléments d'une liste avec un titre, en utilisant une méthode spécifique si fournie.
     """
     print(f"{Fore.BLUE}\n\n{titre.upper()}\n{Style.RESET_ALL}{'-' * 60}")
+
     for i, element in enumerate(liste, start=1):
-        if methode is not None:
+        if methode:
             if hasattr(element, methode): print(f"{i}) {getattr(element, methode)()}")
             else: print(f"{i}) {element}")
         else: print(f"{i}) {element}")
@@ -29,7 +30,7 @@ def afficher_contenu_liste(liste: list, titre: str, methode=None) -> None:
 def afficher_main() :
     """
     Affiche les options du main à l'utilisateur.
-    Retourne le choix de l'utilisateur
+    Retourne le choix de l'utilisateur (un int).
     """
     main = [
     "Afficher moyenne général",
@@ -45,7 +46,7 @@ def afficher_main() :
     return int(input((Fore.GREEN + "\nEntre le chiffre correspondant à ce que tu veux faire : " + Style.RESET_ALL)))
 
 
-def afficher_tableau(lst_objet_cours : object) -> object:
+def afficher_tableau(lst_objet_cours : list[object]) -> object:
     """
     Créer un tableau contenant les moyennes de la classe et de l'utilisateur et l'affiche.
     """
@@ -57,4 +58,4 @@ def afficher_tableau(lst_objet_cours : object) -> object:
             ecart =  f"{Fore.RED}{str(ecart)}{Fore.RESET}" if ecart <= 0 else f"{Fore.GREEN}{str(ecart)}{Fore.RESET}"
         table_data.append([(cours.get_nom()), cours.get_moyenne(), moyenne_classe, ecart, cours.get_note_total_str()])
     headers = ["Cours", "Moyenne (%)", "Moyenne de la classe(%)", "Écart entre les moyennes(%)", "Points accumulés"]
-    return tabulate(table_data, headers=headers, tablefmt="grid", colalign=("left", "left", "left", "left", "left"))
+    print(tabulate(table_data, headers=headers, tablefmt="grid", colalign=("left", "left", "left", "left", "left")))
