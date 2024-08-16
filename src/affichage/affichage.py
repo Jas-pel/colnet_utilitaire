@@ -2,6 +2,7 @@
 from colorama import Fore, Style
 from tabulate import tabulate
 
+
 def choisir_element_liste(liste: list, titre: str, methode=None, nb_element=0) -> None:
     """
     Affiche les éléments d'une liste avec un titre et retourne l'élément choisi par l'utilisateur.
