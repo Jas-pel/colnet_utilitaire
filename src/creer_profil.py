@@ -2,7 +2,7 @@
 from core.user import User
 from core.cours import Cours
 from core.session import Session
-from colnet import Colnet
+from core.colnet import Colnet
 from analyse_scrapping import obtenir_note_total, separer_note_total, filtrer_range_pour_moyenne_classe, calculer_moyenne_classe
 
 
