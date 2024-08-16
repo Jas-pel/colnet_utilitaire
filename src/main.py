@@ -34,14 +34,10 @@ if __name__ == "__main__":
 
 
 # TODO
+# Enlever les messages d'erreurs etranges
 # Mettre plus de fonction dans colnet
-# Regroupe fonction dans colnet
-# Ajouter contact a user
 # Gérer erreur de mot de passe
-# Trouver le nom automatiquement
 # Trouver la note finale plus rapidement
 # Avoir une idée de combien de moyenne de groupe le programme a accès pour prédir la moyenne de classe. Bref un indice de confiance
 # Il a un problème quand le total de point est plus que 100%, dans mon cas francais
-
 # Pondéré moyenne générale
-# Faire une fonction pour reset un pofil ou il est possible de conserver ce que l'on veux
