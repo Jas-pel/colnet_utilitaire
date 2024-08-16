@@ -14,13 +14,10 @@ if __name__ == "__main__":
         match afficher_main():
             case 1 : 
                 print(f"Ta moyenne générale total est de {choisir_session(user).get_moyenne_generale()}%")
-                _ = input(Fore.GREEN + "\nTapez une touche pour continuer" + Style.RESET_ALL)
             case 2 : 
                 print(afficher_tableau(choisir_session(user).get_lst_cours()))
-                _ = input(Fore.GREEN + "\nTapez une touche pour continuer" + Style.RESET_ALL)
             case 3 :
                 afficher_contenu_liste(choisir_session(user).get_historique_moyenne_general(), "Voici l'historique des tes moyennes générales")
-                _ = input(Fore.GREEN + "\nTapez une touche pour continuer" + Style.RESET_ALL)
             case 4 : 
                 actualiser_profil(user)
             case 5 :
@@ -31,6 +28,7 @@ if __name__ == "__main__":
                 send_message(user=user, message="Je t'aime", number_of_message=10, search_manually=True)
             case 8 : break
 
+        _ = input(Fore.GREEN + "\nTapez une touche pour continuer" + Style.RESET_ALL)
 
 
 # TODO
