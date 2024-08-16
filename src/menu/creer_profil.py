@@ -2,8 +2,8 @@
 from core.user import User
 from core.cours import Cours
 from core.session import Session
-from core.colnet import Colnet
-from analyse_scrapping import obtenir_note_total, separer_note_total, filtrer_range_pour_moyenne_classe, calculer_moyenne_classe
+from scrapping.colnet import Colnet
+from scrapping.analyse_scrapping import obtenir_note_total, separer_note_total, filtrer_range_pour_moyenne_classe, calculer_moyenne_classe
 
 
 def obtenir_liste_objet_cours(bot) -> list[Cours]: # NOTE : À optimiser

@@ -3,7 +3,7 @@ from core.user import User
 from core.session import Session
 from storage.pickle import load_lst_user_pickle, enregistrer_pickle, dump_lst_user_pickle
 from affichage.affichage import choisir_element_liste, afficher_contenu_liste
-from creer_profil import creer_profil, actualiser_session
+from menu.creer_profil import creer_profil, actualiser_session
 
 
 def choisir_profil() -> User:
