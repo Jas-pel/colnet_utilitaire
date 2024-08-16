@@ -25,6 +25,25 @@ def afficher_contenu_liste(liste: list, titre: str, methode=None) -> None:
         else: print(f"{i}) {element}")
 
 
+def afficher_main() :
+    """
+    Affiche les options du main à l'utilisateur.
+    Retourne le choix de l'utilisateur
+    """
+    main = [
+    "Afficher moyenne général",
+    "Afficher moyenne de classe et de groupe",
+    "Afficher historiques des moyennes général",
+    "Actualiser le profil",
+    "Modifier mon profil",
+    "Supprimer un profil",
+    "Écrire à quelqu'un",
+    "Quitter"
+    ]
+    afficher_contenu_liste(main, f"Choisit une option !")
+    return int(input((Fore.GREEN + "\nEntre le chiffre correspondant à ce que tu veux faire : " + Style.RESET_ALL)))
+
+
 def afficher_tableau(lst_objet_cours : object) -> object:
     """
     Créer un tableau contenant les moyennes de la classe et de l'utilisateur et l'affiche.

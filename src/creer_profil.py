@@ -1,7 +1,7 @@
 # Ce fichier contient des fonctions permettant d'aller chercher de l'informations aux niveaux académique de l'utilisateur
-from user import User
-from cours import Cours
-from session import Session
+from core.user import User
+from core.cours import Cours
+from core.session import Session
 from colnet import Colnet
 from analyse_scrapping import obtenir_note_total, separer_note_total, filtrer_range_pour_moyenne_classe, calculer_moyenne_classe
 
