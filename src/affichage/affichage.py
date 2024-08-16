@@ -1,4 +1,4 @@
-# Ce fichier contient les fonctions en lien avec l'affichage d'informations
+# Ce fichier contient les fonctions en lien avec l'affichage d'informations.
 from colorama import Fore, Style
 from tabulate import tabulate
 
