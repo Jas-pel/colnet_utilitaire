@@ -27,7 +27,7 @@ if __name__ == "__main__":
             case 6 : 
                 supprimer_profil()
             case 7 : 
-                send_message(user=user, message="Salut", object="Test", number_of_message=30, search_manually=False)
+                send_message(user=user, message="Salut", object="Test", number_of_message=50, search_manually=False)
             case 8 : break
 
         _ = input(Fore.GREEN + "\nTapez une touche pour continuer" + Style.RESET_ALL)
