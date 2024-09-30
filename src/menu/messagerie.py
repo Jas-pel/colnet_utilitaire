@@ -1,6 +1,6 @@
 # Ce fichier contient des fonctions en lien avec la messagerie de colnet
-from core.user import User
-from scrapping.colnet import Colnet
+from src.core.user import User
+from src.scrapping.colnet import Colnet
 
 def automatically_find_target_information(bot):
     """ 

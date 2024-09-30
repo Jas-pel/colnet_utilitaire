@@ -22,12 +22,12 @@ def obtenir_note_total(td_b_elements) -> str:
         # Il existe deux cas différents répertoriées
         if re.search(r'Note final', texte):
             points_accumulées = re.search(r'\d+,\d+|\d+', texte)
-            note_total = f"{points_accumulées.group(0)},00/100,00"
+            note_total = f"{points_accumulées.group()},00/100,00"
             break
         
         if re.search(r'Nombre de points accumulés à ce jour', texte):
-            note_total = re.search(r'\d+,\d+|\d+', texte)
-            break
+            match = re.search(r'(\d+,\d{2}) / (\d+,\d{2})', texte)  #HACK
+            note_total = match.group()
     return note_total
 
 

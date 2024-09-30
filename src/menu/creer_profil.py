@@ -1,9 +1,9 @@
 # Ce fichier contient des fonctions permettant d'aller chercher de l'informations aux niveaux académique de l'utilisateur
-from core.user import User
-from core.cours import Cours
-from core.session import Session
-from scrapping.colnet import Colnet
-from scrapping.analyse_scrapping import obtenir_note_total, separer_note_total, filtrer_range_pour_moyenne_classe, calculer_moyenne_classe
+from src.core.user import User
+from src.core.cours import Cours
+from src.core.session import Session
+from src.scrapping.colnet import Colnet
+from src.scrapping.analyse_scrapping import obtenir_note_total, separer_note_total, filtrer_range_pour_moyenne_classe, calculer_moyenne_classe
 
 
 def obtenir_liste_objet_cours(bot) -> list[Cours]: # NOTE : À optimiser

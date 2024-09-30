@@ -1,9 +1,9 @@
 # Contient les fonctions liées au profil
-from core.user import User
-from core.session import Session
-from storage.pickle import load_lst_user_pickle, enregistrer_pickle, dump_lst_user_pickle
-from affichage.affichage import choisir_element_liste, afficher_contenu_liste
-from menu.creer_profil import creer_profil, actualiser_session
+from src.core.user import User
+from src.core.session import Session
+from src.storage.pickle import load_lst_user_pickle, enregistrer_pickle, dump_lst_user_pickle
+from src.affichage.affichage import choisir_element_liste, afficher_contenu_liste
+from src.menu.creer_profil import creer_profil, actualiser_session
 
 
 def choisir_profil() -> User:

@@ -11,9 +11,12 @@ class Cours:
         """ Retourne le nom de la matière. """
         return self.__nom
     
-    def set_moyenne(self, note:float, total:float) -> float:
+    def set_moyenne(self, note:float, total:float) -> float:    #HACK
         """ Définis la moyenne du cours. """
-        self.__note_cours = round(note/total*100, 2)
+        try:
+            self.__note_cours = round(note/total*100, 2)
+        except ZeroDivisionError:
+            self.__note_cours = 0
 
     def get_moyenne(self) -> float:
         """ Retourne la moyenne de la matière. """

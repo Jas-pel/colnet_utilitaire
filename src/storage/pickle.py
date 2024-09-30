@@ -1,6 +1,6 @@
 # Fonctions liées à la gestion des fichiers pickle
 import pickle
-from core.user import User
+from src.core.user import User
 
 
 def load_lst_user_pickle() -> list[User] | list:
@@ -8,7 +8,7 @@ def load_lst_user_pickle() -> list[User] | list:
     Retourne la liste d'objet user du pickle.
     Si il y a aucun user retourne une liste vide.
     """
-    with open("data_base_user.pickle", 'rb') as fichier:
+    with open(r"src\storage\data_base_user.pickle", 'rb') as fichier:
         try: lst_user = pickle.load(fichier)
         except EOFError: lst_user = []
     return lst_user

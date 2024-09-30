@@ -1,7 +1,7 @@
 # Import
-from affichage.affichage import afficher_contenu_liste, afficher_tableau, afficher_main
-from menu.messagerie import send_message
-from menu.profil_service import choisir_profil, actualiser_profil, modifier_profil, supprimer_profil, choisir_session
+from src.affichage.affichage import afficher_contenu_liste, afficher_tableau, afficher_main
+from src.menu.messagerie import send_message
+from src.menu.profil_service import choisir_profil, actualiser_profil, modifier_profil, supprimer_profil, choisir_session
 from colorama import Fore, Style
 import os
 import sys
