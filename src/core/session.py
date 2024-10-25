@@ -34,11 +34,6 @@ class Session:
             if cours in lst_anciens_cours:
                 self.__lst_cours.remove(cours)
             self.__lst_cours.append(cours)
-
-    def get_moyenne_generale(self) -> str:
-        """ Calcule et retourne la moyenne générale des cours suivis par l'utilisateur. """
-        return round(sum(cours.get_moyenne() for cours in self.__lst_cours) / len(self.__lst_cours), 2)
-
     
     def get_lst_cours(self) -> list[object]:
         """ Renvoie la liste des cours suivis dans cette session. """
